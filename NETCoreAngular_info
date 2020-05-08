@@ -1,4 +1,4 @@
-Section 2 - 18  
+Section 3 - 23  
 
 
 
@@ -111,4 +111,12 @@ Section 2 - 18
 			[user]
 				name = szilvia
 				email = szugyisz@yahoo.com
-			
+	
+	github account:
+	https://github.com/ 
+	szugyi-szilvia
+	szugyisz@yahoo.com
+	kikice00
+	after creating the repository on github we get thsi command and run it in VSCode terminal:
+	PS D:\DOTNET\Udemy_NETCoreAngular> git remote add origin https://github.com/szugyi-szilvia/DatingApp.git
+	now in source control tab we have up in the header an "..." menu  -> select click "push to ..."
