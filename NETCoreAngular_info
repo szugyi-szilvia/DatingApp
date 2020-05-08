@@ -1,0 +1,105 @@
+Section 2 - 18  
+
+
+
+
+	go to folder where the app should be created
+	in cmd line type: dotnet new webapi -n DatingApp.API
+	in cmd line type (in folder app): code .
+	
+	in VS Code:
+	(CTRL + SHIFT + P -> all commands dropdown)
+	install extensions: 
+		c# for VS (search for generate if debug not installed during c# install),
+		c# extensions jchannon (no longer under development but needed for this tutorial)
+		nuget packet manager
+	  !! ctrl+shift+p - developer reload window	
+	  
+	Project:
+	File -> Preferences -> settings -> search for "exclude"
+		under text editor - Files - add: **/obj , **/bin 
+		  so that this two folders would not appear in the project solution explorer
+	Run:
+	open terminal window and type: dotnet run (in the project folder)
+	STOP: CTRL + C
+	
+	set this for project (we do not want to use https):
+	in solution explorer - Properties launchSettings.json delete from DatingApp.API: 	https://localhost:5001
+	startup.cs - comment out: app.UseHttpsRedirection();
+	
+	after - dotnet run - we will get our app url: ...	"Now listening on: http://localhost:5000 "
+	in browser user the root url with the first dummy controller:
+	http://localhost:5000/WeatherForecast
+	dotnet watch run 
+	File menu - AutoSave - turn on			
+	
+	
+	Added Microsoft.EntityFramework.Core - with ctrl+shift+P , select vesrion - and restore
+	restore if needed manually - ctrl+shift+P - restore "XXXXX" project
+	(this will be visible in the *.csproj file)
+	
+	Add nuget package - ctrl+shift+P "nuget" - enter Microsoft.EntityFrameworkCore.Sqlite 
+	and restore!
+	(this will be visible in the *.csproj file)
+	
+	install dotnet emtity framework tools
+	-in vs code terminal type: dotnet tool install --global dotnet-ef
+	-- check: dotnet ef --help
+	
+	dotnet ef migrations --help
+	
+	dotnet ef migrations add InitialCreate -- nece ici dok ne dodamo i donji "design"
+	add nuget package: Microsoft.EntityFrameworkCore.Design and restore
+	
+	db create: 
+		dotnet ef migrations add InitialCreate -> napravice se Migrations folder sa 3 fajla
+		dotnet ef database update -> napravice se datingapp.db
+		
+	datingapp.db se moze otvoriti sa sqlLiteBrowserom - sto smo instalirali pre
+	
+	shortcuts:
+	find file: ctrl P
+	all commands dropdown: CTRL + SHIFT + P
+	add property -> type prop
+	add constructor ->  type ctor
+	click on re squiggly -> click on lightbulb - add "using...
+	initialize new parameter -> slect new parameter - ctrl . 
+	add using -> ctrl .
+	
+	
+	angular app:
+	https://cli.angular.io/
+	
+	posle ng serve ako ima greske o nekom scripts disabled:
+	(google -> ng serve File  cannot be loaded because running scripts is disabled on this system.)
+	Remove ng.ps1 from the directory C:\Users\%username%\AppData\Roaming\npm\ 
+		then try clearing the npm cache at C:\Users\%username%\AppData\Roaming\npm-cache\
+	
+	
+	posle ng serve
+	ako krene compile ali posle bude greska: ERROR in TypeError: Cannot read property 'flags' of undefined at resolveAlias 
+		ng --version - unutar terminala, ne u cmd.exe!
+		ako je ver 9.1.4 a posle u listi detalji 9.1.5 - onda instalirati i detalje u verziji 9.1.4
+		npm install @angular/core@9.1.4 @angular/animations@9.1.4 @angular/common@9.1.4 @angular/forms@9.1.4 @angular/platform-browser@9.1.4 @angular/router@9.1.4 @angular/platform-browser-dynamic@9.1.4 @angular/compiler@9.1.4 @angular/compiler-cli@9.1.4 @angular/language-service@9.1.4
+		
+	
+	add extentions in VSCode for angular:
+	angular snippets   - by John Papa
+	angular files
+	angular language
+	auto renam tag
+	bracket pair colorizer
+	debugger for chrome
+	material ui theme ---> matherial Icon theme gore iz command?!?!neceg - i activate kad iskoci dole desno
+	prettier
+	tslint
+	angular2 swithcer
+	
+	bootstrap intall 
+	- uci u client app folder u terminalu - u datingApp-SPA
+	 i type: npm install bootstrap font-awesome
+	
+	
+	setup git
+	first install if needed
+	goto VSCode terminal, goto the folder and type: git init
