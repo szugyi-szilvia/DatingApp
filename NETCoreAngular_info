@@ -103,3 +103,12 @@ Section 2 - 18
 	setup git
 	first install if needed
 	goto VSCode terminal, goto the folder and type: git init
+	set up .gitignore file
+	foto VSCode source control tab , type above the changed file "initial commit" 
+		and hit + below in the row "changes" - so that the row title change to "staged changes" 
+		and then hit ctrl enter -> so that the files are committed and the list clears
+	error about config --- I added this to project root config file:
+			[user]
+				name = szilvia
+				email = szugyisz@yahoo.com
+			
