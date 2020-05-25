@@ -1,6 +1,7 @@
-Section 3 - 23  
+Section 3 - 36   
 
 
+https://www.udemy.com/course/build-an-app-with-aspnet-core-and-angular-from-scratch/learn/lecture/8707168#overview
 
 
 	go to folder where the app should be created
@@ -59,7 +60,7 @@ Section 3 - 23
 	
 	shortcuts:
 	find file: ctrl P
-	all commands dropdown: CTRL + SHIFT + P
+	all commands dropdown: CTRL + SHIFT + P (comannd palette)
 	add property -> type prop
 	add constructor ->  type ctor
 	click on re squiggly -> click on lightbulb - add "using...
@@ -120,3 +121,23 @@ Section 3 - 23
 	after creating the repository on github we get thsi command and run it in VSCode terminal:
 	PS D:\DOTNET\Udemy_NETCoreAngular> git remote add origin https://github.com/szugyi-szilvia/DatingApp.git
 	now in source control tab we have up in the header an "..." menu  -> select click "push to ..."
+	
+	dodavanje tabele / clase (entity framework, ef)
+	napravimo c# klasu unutar Models foldera i:
+	dotnet ef migrations add %%%%%neki%commnet%% - posle proveriti Migrations folder, .... da li je tabela/code ok
+	dotnet ef database update - da se doda tabela u bazu
+	
+	dotnet ef migrations add AddedUserEntity
+	
+	
+	
+	add 2 more packages to datingApp.api.csproj
+	add NugetPacket - (ctrl + shift + p)
+	Microsoft.IdentityModel.Tokens  
+	System.IdentityModel.Tokens.Jwt
+	
+	https://jwt.io - pregled tokena
+	
+	dodat nuget package:
+	Microsoft.AspNetCore.Authentication.JwtBearer
+	izbrisano: <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0"/>
