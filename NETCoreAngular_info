@@ -1,5 +1,5 @@
-Section 3 - 36   
-
+Section 4 - 47 
+? na kraju 38 je za git - brisanje fajla iz repo koji necemo da pratimo
 
 https://www.udemy.com/course/build-an-app-with-aspnet-core-and-angular-from-scratch/learn/lecture/8707168#overview
 
@@ -101,6 +101,7 @@ https://www.udemy.com/course/build-an-app-with-aspnet-core-and-angular-from-scra
 	 i type: npm install bootstrap font-awesome
 	
 	
+	
 	setup git
 	first install if needed
 	goto VSCode terminal, goto the folder and type: git init
@@ -141,3 +142,31 @@ https://www.udemy.com/course/build-an-app-with-aspnet-core-and-angular-from-scra
 	dodat nuget package:
 	Microsoft.AspNetCore.Authentication.JwtBearer
 	izbrisano: <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0"/>
+	
+	angular
+	ading component  - desni click na src/app folder i generate component, 
+			proveriti da li je u src/app/app.module.ts dodat import za njega
+			- selektor ce mu biti app-nav, to se vidi u ts fajlu komponente
+			- taj selektor dodajemo u src/app/app.component.html
+	shortcuts
+	  in html start type a-ng... a-ngModule za binding
+	  npr a-ngIf ENTER -> ubaci *ngIf="%%%%%"
+	  alt-o - sa html na komponentu
+	  type: div.form-group ->  <div class="form-group"></div>
+	  
+	 angular - create services
+		create  a folder for services, right click and select "Generate Service"
+	(the root module in angular is the app.module.ts) - treba da se doda tamo novi service pod "providers'
+	   i mora da je na listi 'import' gore u ovom istom fajlu
+	   
+	(test user na datingapp - user/pass: john1/password)
+	get html snippets from bootstrap:
+		getbootstrap.com - documentation - components -
+	angular dodavanje komponente - app.module.ts - proveriti u import i u nabrajanju NGModule da li je komponenta dodata
+	
+	u HTML delu:
+	form #registerForm="ngForm" (ngSubmit)="register()">
+	--rekli smo da je ovaj form angular form, i na submit ce se izvrsiti iz code fajla register()
+	   i onda moramo zadati name propertije za inpute i kontrole
+	   i za kontrole -> a-ngModule da bi povezali input sa vrednoscu naseg mododela [(ngModel)]="binding" za input
+	funkcija je u zagradi npr  (click)="cancel()"
