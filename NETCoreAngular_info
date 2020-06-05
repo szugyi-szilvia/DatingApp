@@ -1,4 +1,4 @@
-Section 4 - 53
+Section 6 - 59
 ? na kraju 38 je za git - brisanje fajla iz repo koji necemo da pratimo
 
 https://www.udemy.com/course/build-an-app-with-aspnet-core-and-angular-from-scratch/learn/lecture/8707168#overview
@@ -13,7 +13,7 @@ Build an app with ASPNET Core and Angular from scratch
 	in cmd line type (in folder app): code .
 	
 	in VS Code:
-	(CTRL + SHIFT + P -> all commands dropdown)
+	(CTRL + SHIFT + P -> all commands dropdown) (view -> command palette)
 	install extensions: 
 		c# for VS (search for generate if debug not installed during c# install),
 		c# extensions jchannon (no longer under development but needed for this tutorial)
@@ -174,3 +174,134 @@ Build an app with ASPNET Core and Angular from scratch
 	   i onda moramo zadati name propertije za inpute i kontrole
 	   i za kontrole -> a-ngModule da bi povezali input sa vrednoscu naseg mododela [(ngModel)]="binding" za input
 	funkcija je u zagradi npr  (click)="cancel()"
+	
+	
+	
+	Third party lybs: helpers
+	
+	
+	alertifyjs - https://alertifyjs.com/
+	VS Code - terminal window - cd to DatingApp-SPA , npm install alertifyjs
+	alertify nije prepoznat ->
+		u src smo dodali fajl *.d.ts koji treba posle da dodamo u tsconfig.json pod "Compileoptions" "typeRoots"
+	
+	angular JWT - obratiti paznju da je odgovarajuca verzija
+	https://github.com/auth0/angular2-jwt
+	... gde pise da je:
+		@auth0/angular-jwt v4 is to be used with Angular v6+ and RxJS v6+. 
+		For Angular v4.3 to v5+, use @auth0/angular-jwt v1
+		
+	! uci u terminalu u dir za SPA i tamo npm install @auth0/angular-jwt
+	
+	NGX Bootstrap
+	https://valor-software.com/ngx-bootstrap/#/
+	-- naci na stranici install komandu
+	npm install ngx-bootstrap --save
+	--dodati i u app.module.ts pod imports
+	ima na sajtu uputstvo kako sta dodati da bise povezalo - za angular-cli please refer to getting-started-with-ng-cli
+	
+	
+	Bootswatch
+	https://bootswatch.com/help/
+	kada smo odabrali temu ima help link gore sa uputstvom kako da instaliramo
+	porveriti verzije, i u style.css treba da ga importujemo posle importa bootsrapa jer ovo prepisuje stileove iz toga
+	
+	
+
+
+
+	
+	
+	
+	ako zatreba - 
+	----------------------
+	cd .\DatingApp-SPA\
+PS D:\DOTNET\Udemy_NETCoreAngular\DatingApp-SPA> npm install alertifyjs
+npm WARN bootstrap@4.4.1 requires a peer of jquery@1.9.1 - 3 but none is installed. You must install peer dependencies yourself.
+npm WARN bootstrap@4.4.1 requires a peer of popper.js@^1.16.0 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.3 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.3: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules\watchpack\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules\webpack-dev-server\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
++ alertifyjs@1.13.1
+added 1 package from 1 contributor, removed 1 package and audited 1431 packages in 17.088s
+
+50 packages are looking for funding
+  run `npm fund` for details
+
+found 4 vulnerabilities (2 low, 2 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+PS D:\DOTNET\Udemy_NETCoreAngular\DatingApp-SPA> npm audit
+                                                                                
+                       === npm audit security report ===                        
+                                                                                
+# Run  npm install --save-dev @angular-devkit/build-angular@0.901.7  to resolve 1 vulnerability
+                                                                                
+  Low             Prototype Pollution                                           
+                                                                                
+  Package         yargs-parser                                                  
+                                                                                
+  Dependency of   @angular-devkit/build-angular [dev]                           
+                                                                                
+  Path            @angular-devkit/build-angular > webpack-dev-server > yargs >  
+                  yargs-parser                                                  
+                                                                                
+  More info       https://npmjs.com/advisories/1500                             
+                                                                                
+
+
+# Run  npm install --save-dev protractor@7.0.0  to resolve 1 vulnerability
+SEMVER WARNING: Recommended action is a potentially breaking change
+                                                                                
+  Low             Prototype Pollution                                           
+                                                                                
+  Package         yargs-parser                                                  
+                                                                                
+  Dependency of   protractor [dev]                                              
+                                                                                
+  Path            protractor > yargs > yargs-parser                             
+                                                                                
+  More info       https://npmjs.com/advisories/1500                             
+                                                                                
+
+
+# Run  npm update http-proxy --depth 4  to resolve 2 vulnerabilities
+                                                                                
+  High            Denial of Service                                             
+                                                                                
+  Package         http-proxy                                                    
+                                                                                
+  Dependency of   @angular-devkit/build-angular [dev]                           
+                                                                                
+  Path            @angular-devkit/build-angular > webpack-dev-server >          
+                  http-proxy-middleware > http-proxy                            
+                                                                                
+  More info       https://npmjs.com/advisories/1486                             
+                                                                                
+
+
+                                                                                
+  High            Denial of Service                                             
+                                                                                
+  Package         http-proxy                                                    
+                                                                                
+  Dependency of   karma [dev]                                                   
+                                                                                
+  Path            karma > http-proxy                                            
+                                                                                
+  More info       https://npmjs.com/advisories/1486                             
+                                                                                
+
+
+found 4 vulnerabilities (2 low, 2 high) in 1431 scanned packages
+  run `npm audit fix` to fix 3 of them.
+  1 vulnerability requires semver-major dependency updates.
+PS D:\DOTNET\Udemy_NETCoreAngular\DatingApp-SPA>
+	
+	
+	
+	
+	
