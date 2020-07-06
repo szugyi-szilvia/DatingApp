@@ -1,5 +1,7 @@
-Section 6 - 59
+Section 7 - 65
 ? na kraju 38 je za git - brisanje fajla iz repo koji necemo da pratimo
+
+learning@intens.rs f3otdZpQvv36ciEumjTd
 
 https://www.udemy.com/course/build-an-app-with-aspnet-core-and-angular-from-scratch/learn/lecture/8707168#overview
 
@@ -156,6 +158,7 @@ Build an app with ASPNET Core and Angular from scratch
 	  in html start type a-ng... a-ngModule za binding
 	  npr a-ngIf ENTER -> ubaci *ngIf="%%%%%"
 	  alt-o - sa html na komponentu
+	  alt-u -> .ts?
 	  type: div.form-group ->  <div class="form-group"></div>
 	  
 	 angular - create services
@@ -208,6 +211,11 @@ Build an app with ASPNET Core and Angular from scratch
 	
 	
 
+	route router guard
+	generate guard: in terminal window cd into -SPA app to _guard folder
+	generate a component here - with "ng g ..."  g:generate
+	ng g guard auth --skipTests (guard is the component and we named it aut)
+	in terminal we will get options, select it with SPACE key and enter
 
 
 	
