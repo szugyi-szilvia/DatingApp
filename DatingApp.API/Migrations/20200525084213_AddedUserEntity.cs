@@ -7,13 +7,13 @@ namespace DatingApp.API.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterColumn<string>(
+            /*migrationBuilder.AlterColumn<string>(
                 name: "Name",
                 table: "Values",
                 nullable: true,
                 oldClrType: typeof(string),
                 oldType: "STRING",
-                oldNullable: true);
+                oldNullable: true);*/
 
             migrationBuilder.CreateTable(
                 name: "Users",
@@ -21,7 +21,7 @@ namespace DatingApp.API.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Username = table.Column<int>(nullable: false),
+                    Username = table.Column<string>(nullable: false),
                     PasswordHash = table.Column<byte[]>(nullable: true),
                     PasswordSalt = table.Column<byte[]>(nullable: true)
                 },
@@ -36,13 +36,13 @@ namespace DatingApp.API.Migrations
             migrationBuilder.DropTable(
                 name: "Users");
 
-            migrationBuilder.AlterColumn<string>(
+            /*migrationBuilder.AlterColumn<string>(
                 name: "Name",
                 table: "Values",
                 type: "STRING",
                 nullable: true,
                 oldClrType: typeof(string),
-                oldNullable: true);
+                oldNullable: true);*/
         }
     }
 }

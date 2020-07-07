@@ -1,9 +1,12 @@
-Section 7 - 65
+Section 8 - 77
 ? na kraju 38 je za git - brisanje fajla iz repo koji necemo da pratimo
 
 learning@intens.rs f3otdZpQvv36ciEumjTd
 
 https://www.udemy.com/course/build-an-app-with-aspnet-core-and-angular-from-scratch/learn/lecture/8707168#overview
+
+
+dotnet --version
 
 
 Build an app with ASPNET Core and Angular from scratch
@@ -67,6 +70,7 @@ Build an app with ASPNET Core and Angular from scratch
 	shortcuts:
 	find file: ctrl P
 	all commands dropdown: CTRL + SHIFT + P (comannd palette)
+	add nuget package: CTRL + SHIFT + P (comannd palette) - type:nuget - select add package - enter package name and ENTER - - - and Restore
 	add property -> type prop
 	add constructor ->  type ctor
 	click on re squiggly -> click on lightbulb - add "using...
@@ -136,6 +140,11 @@ Build an app with ASPNET Core and Angular from scratch
 	
 	dotnet ef migrations add AddedUserEntity
 	
+	(bookmark at sectin 8 - 71,  3:10 solve migration problems)
+	
+	dotnet ef database drop 
+	
+	
 	
 	
 	add 2 more packages to datingApp.api.csproj
@@ -165,6 +174,9 @@ Build an app with ASPNET Core and Angular from scratch
 		create  a folder for services, right click and select "Generate Service"
 	(the root module in angular is the app.module.ts) - treba da se doda tamo novi service pod "providers'
 	   i mora da je na listi 'import' gore u ovom istom fajlu
+	-- kada dodamo novi Interface - napravimo klasu - onda u startup u ConfigureServices() treba da dodamo  
+			npr ako je klasa DatingRepository: services.AddScoped<IDatingRepository, DatingRepository>();
+	
 	   
 	(test user na datingapp - user/pass: john1/password)
 	get html snippets from bootstrap:
@@ -218,6 +230,46 @@ Build an app with ASPNET Core and Angular from scratch
 	in terminal we will get options, select it with SPACE key and enter
 
 
+	db seeding at https://www.json-generator.com/
+	
+	
+	dodavanje newtonsoftJson package
+	to je Microsoft.AspNetCore.Mvc.NewtonsoftJson
+	na https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.NewtonsoftJson/
+	  ima za copy sta treba da se upise u terminalu i u package fajlu
+	Install-Package Microsoft.AspNetCore.Mvc.NewtonsoftJson -Version 3.1.5
+	<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.5" />
+	i posle restore project -- sa ctrl shift p -> restore
+	---- posle smo dodali u Startup.cs u ConfigureServices() services.AddControllers().AddNewtonsoftJson();
+	... ovo je trebalo odraditi jer po defaultu .net core 3 ne podrzava NewtonsoftJson nego neki TextJson
+	
+
+	AutoMapper
+		install nuget package: AutoMapper.Extensions.Microsoft.DependencyInjection
+		- add AutoMapper as a service in startup.cs
+		-- need to restart the project after adding automapper
+
+
+
+
+
+	
+	
+	TEST backenda - postman
+	POST na http://localhost:5000/api/auth/login/
+	body:
+	{
+		"username": "lola",
+		"password": "password"
+	}
+	dobijemo token
+	
+	GET http://localhost:5000/api/users
+	dodamo u postman header Authorization --- Bearer %%%token%%%
+	
+	
+	
+	
 	
 	
 	
