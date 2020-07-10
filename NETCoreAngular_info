@@ -1,4 +1,4 @@
-Section 8 - 77
+Section 9 - 94 
 ? na kraju 38 je za git - brisanje fajla iz repo koji necemo da pratimo
 
 learning@intens.rs f3otdZpQvv36ciEumjTd
@@ -6,7 +6,7 @@ learning@intens.rs f3otdZpQvv36ciEumjTd
 https://www.udemy.com/course/build-an-app-with-aspnet-core-and-angular-from-scratch/learn/lecture/8707168#overview
 
 
-dotnet --version
+dotnet --version   (dotnet version)
 
 
 Build an app with ASPNET Core and Angular from scratch
@@ -76,6 +76,10 @@ Build an app with ASPNET Core and Angular from scratch
 	click on re squiggly -> click on lightbulb - add "using...
 	initialize new parameter -> slect new parameter - ctrl . 
 	add using -> ctrl .
+	switch between component.ts and compoent html: alt+o
+	html - type div.container -> div with class container
+	   can type more than one . 
+	   <div class="col-lg-2 col-md-3 col-sm-6">  -columnumber:largeScreen=2,medium=3,small:6
 	
 	
 	angular app:
@@ -89,7 +93,7 @@ Build an app with ASPNET Core and Angular from scratch
 	
 	posle ng serve
 	ako krene compile ali posle bude greska: ERROR in TypeError: Cannot read property 'flags' of undefined at resolveAlias 
-		ng --version - unutar terminala, ne u cmd.exe!
+		ng --version - unutar terminala, ne u cmd.exe! (angular version)
 		ako je ver 9.1.4 a posle u listi detalji 9.1.5 - onda instalirati i detalje u verziji 9.1.4
 		npm install @angular/core@9.1.4 @angular/animations@9.1.4 @angular/common@9.1.4 @angular/forms@9.1.4 @angular/platform-browser@9.1.4 @angular/router@9.1.4 @angular/platform-browser-dynamic@9.1.4 @angular/compiler@9.1.4 @angular/compiler-cli@9.1.4 @angular/language-service@9.1.4
 		
@@ -166,6 +170,7 @@ Build an app with ASPNET Core and Angular from scratch
 	shortcuts
 	  in html start type a-ng... a-ngModule za binding
 	  npr a-ngIf ENTER -> ubaci *ngIf="%%%%%"
+	     a-ngfor
 	  alt-o - sa html na komponentu
 	  alt-u -> .ts?
 	  type: div.form-group ->  <div class="form-group"></div>
@@ -181,7 +186,8 @@ Build an app with ASPNET Core and Angular from scratch
 	(test user na datingapp - user/pass: john1/password)
 	get html snippets from bootstrap:
 		getbootstrap.com - documentation - components -
-	angular dodavanje komponente - app.module.ts - proveriti u import i u nabrajanju NGModule da li je komponenta dodata
+	angular dodavanje komponente - app.module.ts - proveriti u import i u nabrajanju NGModule (declarations:) da li je komponenta dodata
+
 	
 	u HTML delu:
 	form #registerForm="ngForm" (ngSubmit)="register()">
@@ -268,9 +274,48 @@ Build an app with ASPNET Core and Angular from scratch
 	dodamo u postman header Authorization --- Bearer %%%token%%%
 	
 	
+	ngx-gallery - Angular image gallery plugin
+	https://www.npmjs.com/package/ngx-gallery
+	
+	https://www.npmjs.com/package/@kolkov/ngx-gallery
+	!! za verziju angular 9: npm install @kolkov/ngx-gallery
 	
 	
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	
 	ako zatreba - 

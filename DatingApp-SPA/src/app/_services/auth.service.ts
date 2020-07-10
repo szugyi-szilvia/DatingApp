@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {map} from 'rxjs/operators';
 import {JwtHelperService } from '@auth0/angular-jwt';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
- baseUrl = 'http://localhost:5000/api/auth/';
+baseUrl = environment.apiUrl + 'auth/';
 jwtHelper = new JwtHelperService();
 decodedToken: any;
 
@@ -17,7 +18,7 @@ login(model: any){
   return this.http.post(this.baseUrl + 'login', model)
     .pipe(
       map((response: any) => {
-        const user = response; //token object that is being sent back
+        const user = response; // token object that is being sent back
         if (user){
           localStorage.setItem('token', user.token);
           this.decodedToken = this.jwtHelper.decodeToken(user.token);
